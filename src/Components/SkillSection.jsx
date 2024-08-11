@@ -1,42 +1,10 @@
 import React from 'react'
 import Animation from './Animation'
-import { useInView, motion, useAnimation } from 'framer-motion';
+import { useInView, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react'
 import { ShootingStars } from './ui/shooting-stars';
 import { StarsBackground } from './ui/stars-background';
 import img from "../assets/about.png"
-import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-    DiJavascript1,
-    DiReact,
-    DiNodejs,
-    DiPython,
-    DiGit,
-    DiJava,
-} from "react-icons/di";
-import { BiLogoTypescript } from "react-icons/bi";
-import { VscVscode } from "react-icons/vsc";
-import { GrReactjs } from "react-icons/gr";
-
-import {
-    SiRedux ,
-    SiGithub ,
-    SiMongodb ,
-    SiExpress ,
-    SiVercel,
-    SiPostman,
-    SiCloudinary ,
-    SiZod ,
-    SiTypescript ,
-    SiTailwindcss,
-    SiRedis,
-    SiFirebase,
-    SiNextdotjs,
-    SiSolidity,
-    SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 import Skills from './Skills';
 
 // import { BackgroundBeams } from "../Components/ui/BackgroundBeams";
