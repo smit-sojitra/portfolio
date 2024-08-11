@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import Animation from './Animation'
-import { HiMenu } from "react-icons/hi";
 import DropDownMenu from './DropDownMenu';
 import { Link } from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
-import { SiImessage } from "react-icons/si";
 import { TiMessage } from "react-icons/ti";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { IoHomeOutline } from "react-icons/io5";

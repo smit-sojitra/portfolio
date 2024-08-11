@@ -1,7 +1,5 @@
-import React from 'react';
 import Button from './Button';
 import Animation from './Animation'
-import { TypeAnimation } from 'react-type-animation';
 import Typewriter from "typewriter-effect";
 import HomeLogo from "../assets/home-main.svg"
 
