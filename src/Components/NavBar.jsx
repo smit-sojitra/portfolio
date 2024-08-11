@@ -6,12 +6,8 @@ import { GoPerson } from "react-icons/go";
 import { TiMessage } from "react-icons/ti";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { IoHomeOutline } from "react-icons/io5";
-
-
-
-
+import img from "../assets/image.png"
 const NavBar = () => {
-  const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => {
@@ -25,9 +21,7 @@ const NavBar = () => {
     return () =>
       window.removeEventListener("scroll", onScroll);
   }, [])
-  // const clickHandler = ()=>{
-  //   setMenu((prev)=>!prev);
-  // }
+
 
   return (
 
@@ -36,7 +30,7 @@ const NavBar = () => {
         <div className="logo-container">
           <Animation >
             <Link to={'/'}>
-              <img className="logo w-[clamp(35px,10vw,70px)]" src="../src/assets/image.png" alt="J" />
+              <img className="logo w-[clamp(35px,10vw,70px)]" src={img} alt="J" />
             </Link>
           </Animation>
           <Animation>

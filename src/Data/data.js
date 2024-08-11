@@ -1,5 +1,5 @@
 import next from "../assets/NextJsCircle.png"
-import react1 from "../assets/React.png"
+import react1 from "../assets/react-image.png"
 import mongo from "../assets/MongoDB.svg"
 import tailwind from "../assets/Tailwind.png"
 import typeScript from "../assets/Typescript.svg"

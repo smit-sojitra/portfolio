@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { userValidation } from '../validations/userValidation'
 import { toast, Slide, Zoom, ToastContainer } from 'react-toastify'
+import img from "../assets/contact-img.svg"
 const ContactSection = () => {
     const [isloading, setIsloading] = useState(false)
     const baseUrl = import.meta.env.VITE_BASE_URL
@@ -147,7 +148,7 @@ const ContactSection = () => {
                         <form onSubmit={handleSubmit(onSubmit)} className="form" action="">
                             <div className="formfield-container justify-center items-center width-full">
                                 <Animation >
-                                    <img src="../src/assets/contact-img.svg" className='img pb-16 hidden lg:block' alt="" />
+                                    <img src={img} className='img pb-16 hidden lg:block' alt="" />
                                 </Animation>
                                 <div className='form-container w-full sm:w-[80%] lg:max-w-[42%]'>
                                     <Animation>
