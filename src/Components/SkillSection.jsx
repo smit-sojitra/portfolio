@@ -1,115 +1,92 @@
 import React from 'react'
 import Animation from './Animation'
-import { useInView ,motion, useAnimation} from 'framer-motion';
+import { useInView, motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react'
+import { ShootingStars } from './ui/shooting-stars';
+import { StarsBackground } from './ui/stars-background';
+import img from "../assets/about.png"
+import { Col, Row } from "react-bootstrap";
+import { CgCPlusPlus } from "react-icons/cg";
+import {
+    DiJavascript1,
+    DiReact,
+    DiNodejs,
+    DiPython,
+    DiGit,
+    DiJava,
+} from "react-icons/di";
+import { BiLogoTypescript } from "react-icons/bi";
+import { VscVscode } from "react-icons/vsc";
+import { GrReactjs } from "react-icons/gr";
 
+import {
+    SiRedux ,
+    SiGithub ,
+    SiMongodb ,
+    SiExpress ,
+    SiVercel,
+    SiPostman,
+    SiCloudinary ,
+    SiZod ,
+    SiTypescript ,
+    SiTailwindcss,
+    SiRedis,
+    SiFirebase,
+    SiNextdotjs,
+    SiSolidity,
+    SiPostgresql,
+} from "react-icons/si";
+import { TbBrandGolang } from "react-icons/tb";
+import Skills from './Skills';
 
 // import { BackgroundBeams } from "../Components/ui/BackgroundBeams";
 
 const SkillSection = () => {
-    
+
     const ref1 = useRef(null);
-    const isInView2 = useInView(ref1,{once:true})
-    
+    const isInView2 = useInView(ref1, { once: true })
+
     const ref = useRef(null);
-    const isInView = useInView(ref,{once:true})
+    const isInView = useInView(ref, { once: true })
     const mainControls = useAnimation()
     const mainControls2 = useAnimation()
-    useEffect(()=>{
-        if(isInView){
-        mainControls.start("visible")
+    useEffect(() => {
+        if (isInView) {
+            mainControls.start("visible")
         }
-    },[isInView])
-    useEffect(()=>{
-        if(isInView2){
-        mainControls2.start("visible")
+    }, [isInView])
+    useEffect(() => {
+        if (isInView2) {
+            mainControls2.start("visible")
         }
-    },[isInView2])  
+    }, [isInView2])
 
-  return (
-    <div id="Skills" className="container skills-container">
-        <motion.div className='absolute bottom-[-10.8%] right-[0.4%]' ref={ref}
-            variants={{
-            hidden:{opacity:0, y:75},
-            visible:{opacity:1, y:0},
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{duration:0.9,delay:0.5}}
-            >
-            <div className="skill-fade-text">Skills</div>
-        </motion.div>
-                <div className="skill-container-left">
-                    <h2 className="skill-heading">
-                    <Animation><span className="caps">M</span>e and <br/> My Tech Stack</Animation>
+    return (
+        <div id="" className="min-h-screen relative pb-44 bg-neutral-900 px-10  md:px-20 pt-40">
+            <div className="flex flex-col gap-5 items-center md:pt-16 max-w-[1200px] w-full justify-center md:flex md:flex-row mx-auto">
+                <div className="skill-container-left md:w-[50%] w-full mt-10">
+                    <h2 className="skill-heading z-10">
+                        <Animation>Know Who<span className="text-[#c770f0]"> I'M</span></Animation>
                     </h2>
-                    <div className="skill-subHeading">
-                    <Animation><p>Hi Everyone My name is Pankaj Yadav I am a Mern Stack Developer I have been working for last 3 Years and Currently I am working with a Budding Startup in USA and a full Time Freelancer. Currently I am working on NextJs and Making Beautiful UI-UX are my fey features
-                        </p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque aspernatur, maiores voluptatum minus laudantium? Perspiciatis accusamus minima porro dolores necessitatibus, magni dolorem et qui veniam nulla sequi molestiae maxime.
-                        </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non doloremque aspernatur, maiores voluptatum minus laudantium? Perspiciatis accusamus minima porro dolores necessitatibus, magni dolorem et qui veniam nulla sequi molestiae maxime.
-                    </p></Animation>
-                        
+                    <div className="skill-subHeading z-10 md:[80%] w-full text-xl">
+                        <Animation><div className=' font-medium text-gray-300 leading-relaxed
+                        '>I am a seasoned full stack developer specializing in the MERN stack, with extensive experience in building robust web applications. I have expanded my skill set by mastering Next.js, a versatile full stack framework known for its efficiency and scalability. I am passionate about creating innovative solutions and delivering seamless user experiences, leveraging my expertise to tackle complex challenges in web development.
+                        </div>
+                        </Animation>
+
+                    </div>
+                </div>
+                <div className="skill-container-right w-full md:w-[50%]  relative">
+                    <Animation>
+                        <img src={img} className='' alt="" />
+                    </Animation>
                 </div>
             </div>
-            <div className="skill-container-right relative">
-            <motion.div className='absolute top-[50%] left-[50%]' ref1={ref1}
-            variants={{
-            hidden:{opacity:0, y:75},
-            visible:{opacity:1, y:0},
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{duration:0.9,delay:0.5}}
-            >
-            <img  src="../src/assets/blob vector.png" alt="" className="blob-style"/>
-        </motion.div>
-                
-                
-                <Animation><img src="../src/assets/HTML.png" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/CSS.png" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Javascript.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/React.png" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/NodeJs.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Next.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Redux.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Tailwind.png" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Bootstrap.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/MaterialUI.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Express.png" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Git.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Github.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Graphql.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/MongoDB.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Vercel.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/ChartJs.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Bash.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/Docker.svg" alt="" className="skills-logo"/></Animation>
-                
-                <Animation><img src="../src/assets/K8s.svg" alt="" className="skills-logo"/></Animation>
-                
-            </div>
+            <Skills/>
+            <ShootingStars />
+            <StarsBackground />
         </div>
-  )
+    )
 }
 
 export default SkillSection

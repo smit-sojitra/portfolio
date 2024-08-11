@@ -1,13 +1,19 @@
-import {useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Animation from './Animation'
 import { HiMenu } from "react-icons/hi";
 import DropDownMenu from './DropDownMenu';
+import { Link } from 'react-router-dom';
+import { GoPerson } from "react-icons/go";
+import { SiImessage } from "react-icons/si";
+import { TiMessage } from "react-icons/ti";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { IoHomeOutline } from "react-icons/io5";
 
 
 
 
 const NavBar = () => {
-  const [menu,setMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => {
@@ -17,48 +23,52 @@ const NavBar = () => {
         setScrolled(false);
       }
     }
-    window.addEventListener("scroll", onScroll);    
-    return () => 
+    window.addEventListener("scroll", onScroll);
+    return () =>
       window.removeEventListener("scroll", onScroll);
   }, [])
-  const clickHandler = ()=>{
-    setMenu((prev)=>!prev);
-  }
-  
+  // const clickHandler = ()=>{
+  //   setMenu((prev)=>!prev);
+  // }
+
   return (
 
-    <div className={scrolled? 'scrolled px-3 md:px-0' : 'nav px-3 md:px-0'}>
-      <div className="navbar">
+    <div className={scrolled ? 'scrolled px-4 md:px-0' : 'nav px-4 md:px-0'}>
+      <div className="navbar px-0 md:px-4">
         <div className="logo-container">
-            <Animation >
-              <img className="logo" src="../src/assets/image.png" alt="J"/>
-            </Animation>
-            <Animation>
-              <div className="logo-text">mit sojitra</div>                    
-            </Animation>
+          <Animation >
+            <Link to={'/'}>
+              <img className="logo w-[clamp(35px,10vw,70px)]" src="../src/assets/image.png" alt="J" />
+            </Link>
+          </Animation>
+          <Animation>
+            <Link to={'/'}>
+              <div className="logo-text text-[clamp(15px,5vw,28px)]">mit sojitra</div>
+            </Link>
+          </Animation>
         </div>
         <Animation>
-          <div className='relative'>
-            <HiMenu onClick={clickHandler} className='w-12 h-12 relative sm:hidden text-[#e2ddd6]'/>
-            <div>
-              {
-                menu &&
-                <DropDownMenu/>
-              }
+          <div className='relative sm:hidden'>
+            {/* <HiMenu onClick={clickHandler} className='w-12 h-12 relative sm:hidden text-[#e2ddd6]'/> */}
+            <DropDownMenu />
+            <div >
+
+
             </div>
-          </div>     
-          <div className ="nav-items hidden sm:flex">
-            <div><a href="#Projects" >Projects</a></div>
-            <div><a href="#Skills">Skils</a></div>
-            <div><a href="#Contact Me">Contact</a></div>
-        </div>
+          </div>
+          <div className="nav-items hidden sm:flex">
+            <Link to={'/'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><IoHomeOutline />Home</div></Link>
+            <Link to={'/skills'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><GoPerson />About</div></Link>
+            <Link to={'/projects'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><AiOutlineFundProjectionScreen />Projects</div></Link>
+            <Link to={'/contact'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><TiMessage />Contact</div></Link>
+          </div>
         </Animation>
-    {/* <DropDownMenu/> */}
+        {/* <DropDownMenu/> */}
+      </div>
     </div>
-    </div>
-    
-    
-    
+
+
+
   )
 }
 

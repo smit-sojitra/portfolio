@@ -9,6 +9,12 @@ import ContactSection from './Components/ContactSection'
 import Footer from './Components/Footer'
 import { useEffect, useState } from 'react'
 import Preloader from './Components/Preloader'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+import Skills from './pages/Skills'
+
 
 // import Acertinity from './Components/Acertinity'
 
@@ -20,22 +26,15 @@ function App() {
     },2200)
   },[])
   return (
-    <div className='wrapper'>
-      {
-        loading ?
-        (<Preloader/>) :
-        (<>
-        <NavBar />
-        <HeroSection />
-        <ProjectSection />
-        <SkillSection />
-        <ContactSection />
-        <Footer />
-      </>)
-      }
-      {/* <Acertinity/> */}
-     </div>
-     
+    
+     <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/projects' element={<Projects/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/skills' element={<Skills/>}/>
+        <Route path="*" element={<Navigate to="/"/>} />
+     </Routes>
+      
   )
 }
 

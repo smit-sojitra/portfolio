@@ -7,17 +7,33 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "cd server && npm run dev",
+    "start": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@hookform/resolvers": "^3.9.0",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
+    "lucide-react": "^0.412.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.1",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.0",
+    "react-toastify": "^10.0.5",
     "react-type-animation": "^3.2.0",
-    "tailwind-merge": "^2.3.0"
+    "resolver": "^0.1.12",
+    "tailwind-merge": "^2.3.0",
+    "typewriter-effect": "^2.21.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

@@ -2,78 +2,61 @@ import React from 'react';
 import Button from './Button';
 import Animation from './Animation'
 import { TypeAnimation } from 'react-type-animation';
-
+import Typewriter from "typewriter-effect";
+import HomeLogo from "../assets/home-main.svg"
 
 const HeroSection = () => {
   return (
-    <div className="hero-container min-h-screen">
-      <div className="hero-section ">
-            {/* <div className="fadded-text">John Doe</div> */}
-            <div className="hero-section-left flex items-center mx-auto flex-col justify-center">
-            <Animation><div className="hero-section-heading">Hello,</div></Animation>
-            <Animation><div className="hero-section-heading hero-section-sub-heading w-[630px] mx-auto ml-[6rem]">
-                    I am a 
-                    <TypeAnimation className='mr-[2px]'
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        "Full Stack Developer",
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        "Web Developer",
-        1000,
-        "UI-UX Designer",
-        1000,
-        "Backend Developer",
-        1000, 
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '1em', display: 'inline-block', color:'#3c5bb8', margin:'0 1rem'}}
-      repeat={Infinity}
-    />
-      </div></Animation>
-                <Animation >
-                  <div className="flex items-center justify-center text-center">
-                  <div className="hero-section-desc">
-                    I'm a software developer and here is my portfolio website.Here you'll learn about my journy as a software developer.
-                  </div>
+    <div className="hero-container flex justify-center pb-32 items-center min-h-screen">
+      <div className="hero-section flex flex-col items-center justify-center md:flex md:flex-row  lg:px-0 px-4">
+        {/* <div className="fadded-text">John Doe</div> */}
+        <div className="hero-section-left  flex w-[50%] flex-col justify-center">
+          <Animation><div className="hero-section-heading text-[clamp(25px,5vw,45px)] font-normal">Hi There!{" "}
+            <span className="wave" role="img" aria-labelledby="wave">
+              👋🏻
+            </span>
+          </div></Animation>
+          <Animation>
+            <div className="hero-section-heading w-[700px] flex text-[clamp(25px,5vw,45px)] leading-[45px] hero-section-sub-heading  text-center">
+              I'm
+              <div className="ml-5 text-center text-[#3c5bb8] ">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Software Developer",
+                      "Freelancer",
+                      "MERN Stack Developer",
+                      "Open Source Contributor",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                  }}
+                />
+              </div>
+              {/* style={{display: 'inline-block', color:'#3c5bb8', margin:'0 1rem'}} */}
+            </div></Animation>
+          <Animation >
+            <div className="flex items-center ">
+              <div className="hero-section-desc text-wrap">
+                I'm a full stack developer and here is my portfolio website.Here you'll learn about my journy as a full stack developer.
+              </div>
 
-                  </div>
-                </Animation>
-                
-                {/* <div className="btn" id="">Hire me</div> */}
-                <Animation><Button/></Animation>
-                
             </div>
-            {/* <div className="hero-section-right">
-                <div className="absolute icons icons-dots">
-                    <Animation><img src="../src/assets/dots.png" alt=""/></Animation>
-                </div>
-                <div className="absolute icons icons-cube">
-                    <Animation><img src="../src/assets/cube.png" alt=""/></Animation>
-                    
-                </div>
-                <div className="absolute icons icons-circle">
-                    <Animation><img src="../src/assets/circle.png" alt=""/></Animation>
-                    
-                </div>
-                <div className="absolute icons icons-zigzag">
-                    <Animation><img src="../src/assets/zigzags.png" alt=""/></Animation>
-                    
-                </div>
-                <div className="absolute icons icons-plus">
-                    <Animation><img src="../src/assets/plus.png" alt=""/></Animation>
-                    
-                </div>
-                <Animation>
+          </Animation>
 
-                <div className="user-img">
-                    <Animation><img src="../src/assets/WhatsApp Image 2024-05-27 at 14.04.49_0472a548.jpg" width="345" height="390" alt=""/></Animation>
-                </div>
-                </Animation>
-            </div> */}
-      </div>  
+          {/* <div className="btn" id="">Hire me</div> */}
+          <Animation><Button /></Animation>
+
+        </div>
+        <div className="hero-section-right flex justify-center">
+          <Animation>
+          <img src={HomeLogo} className='max-h-[450px]'></img>
+          </Animation>
+        </div>
+      </div>
     </div>
-    
+
   )
 }
 
