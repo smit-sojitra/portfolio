@@ -14,9 +14,7 @@ exports.submitForm = async (req,res)=>{
                 success:false,
                 message:"all fields are required"
             })
-        }
-        console.log("data---",vallidatedData);
-        
+        }        
         const saveUserData = await User.create({
             firstName:data.firstName,
             lastName:data.lastName,

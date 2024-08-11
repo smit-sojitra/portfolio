@@ -24,8 +24,8 @@ const ContactSection = () => {
 
     useEffect(() => {
         if (errors.firstName && errors.lastName && errors.contactNumber && errors.email && errors.description) {
-            console.log('if')
             toast.error('All fields are required', {
+                className:"custom-toast-container",
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -127,6 +127,7 @@ const ContactSection = () => {
             }, 1500);
             reset();
         } catch (error) {
+            setIsloading(false);
             console.log('err', error)
         }
     }
@@ -269,6 +270,7 @@ const ContactSection = () => {
                             </div>
                         </form>
                         <ToastContainer
+                            className="custom-toast-container"
                             position="top-center"
                             autoClose={3000}
                         />
