@@ -1,12 +1,13 @@
 import { Transition, Dialog } from '@headlessui/react'
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Menu, MenuIcon, X } from 'lucide-react'
+import {  MenuIcon, X } from 'lucide-react'
 import Animation from './Animation'
 import { IoHomeOutline } from 'react-icons/io5'
 import { GoPerson } from 'react-icons/go'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { TiMessage } from 'react-icons/ti'
+import img from "../assets/image.png"
 
 const DropDownMenu = () => {
   const [open, setOpen] = useState(false)
@@ -20,8 +21,8 @@ const DropDownMenu = () => {
     <div className=''>
       <div className='w-full flex justify-between items-center'>
 
-        <button onClick={() => setOpen(true)} className='gap-4'>
-          <MenuIcon />
+        <button onClick={() => setOpen(true)} className='p-2 rounded-lg'>
+          <MenuIcon className='DropMenu' />
         </button>
       </div>
       <Transition.Root show={open} as={Fragment}>
@@ -46,7 +47,7 @@ const DropDownMenu = () => {
                             <div className="logo-container">
                               <Animation >
                                 <Link to={'/'}>
-                                  <img className="logo w-[clamp(35px,10vw,70px)]" src="../src/assets/image.png" alt="J" />
+                                  <img className="logo w-[clamp(35px,10vw,70px)]" src={img} alt="logo" />
                                 </Link>
                               </Animation>
                               <Animation>

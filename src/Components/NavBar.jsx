@@ -11,7 +11,7 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -25,8 +25,8 @@ const NavBar = () => {
 
   return (
 
-    <div className={scrolled ? 'scrolled px-4 md:px-0' : 'nav px-4 md:px-0'}>
-      <div className="navbar px-0 md:px-4">
+    <div className={scrolled ? 'scrolled duration-[500ms] transition-all  px-4 md:px-0' : 'nav duration-[500ms] transition-all px-4 md:px-0'}>
+      <div className="navbar py-1 sm:py-2 px-0 md:px-4">
         <div className="logo-container">
           <Animation >
             <Link to={'/'}>

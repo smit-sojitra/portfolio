@@ -1,5 +1,3 @@
-
-// export default ContactSection
 import React, { useState, useEffect } from 'react'
 import Animation from './Animation'
 import axios from 'axios'
@@ -10,7 +8,8 @@ import { toast, Slide, Zoom, ToastContainer } from 'react-toastify'
 import img from "../assets/contact-img.svg"
 const ContactSection = () => {
     const [isloading, setIsloading] = useState(false)
-    const baseUrl = import.meta.env.VITE_BASE_URL
+    const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+    console.log("BaseUrl--",baseUrl);
     const url = baseUrl + "/send"
     const { register, reset, handleSubmit, formState: { errors } } = useForm({
         resolver: zodResolver(userValidation),
@@ -28,7 +27,7 @@ const ContactSection = () => {
             toast.error('All fields are required', {
                 className:"custom-toast-container",
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -41,7 +40,7 @@ const ContactSection = () => {
             if (errors.firstName) {
                 toast.error(errors.firstName.message, {
                     position: "top-right",
-                    autoClose: 3000,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -54,7 +53,7 @@ const ContactSection = () => {
             if (errors.lastName) {
                 toast.error(errors.lastName.message, {
                     position: "top-right",
-                    autoClose: 3000,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -67,7 +66,7 @@ const ContactSection = () => {
             if (errors.email) {
                 toast.error(errors.email.message, {
                     position: "top-right",
-                    autoClose: 3000,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -80,7 +79,7 @@ const ContactSection = () => {
             if (errors.contactNumber) {
                 toast.error(errors.contactNumber.message, {
                     position: "top-right",
-                    autoClose: 3000,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -93,7 +92,7 @@ const ContactSection = () => {
             if (errors.description) {
                 toast.error(errors.description.message, {
                     position: "bottom-right",
-                    autoClose: 3000,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -135,8 +134,7 @@ const ContactSection = () => {
 
     return (
         <div className="contactus-form-container min-h-screen pt-20 pb-44" id="Contact Me">
-            <div className='flex jc items-center flex-col justify-center h-screen'>
-
+            <div className='flex items-center flex-col justify-center min-h-screen'>
                 <Animation>
                     <p className="contactus-heading text-[clamp(40px,5vw,80px)]">Get in touch</p>
                 </Animation>
@@ -169,10 +167,10 @@ const ContactSection = () => {
                                         </div>
                                     </Animation>
                                     <Animation>
-                                        <button type='submit' className={`${isloading ? 'aboutBtn' : ''}`}>
+                                        <button type='submit' className={`${isloading ? 'aboutBtn cbtn' : 'cbtn'}`}>
                                             <div className="svg-wrapper-1">
                                                 <div className="svg-wrapper">
-                                                    <svg
+                                                    <svg className='cplane'
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
                                                         width="24"
@@ -273,7 +271,7 @@ const ContactSection = () => {
                         <ToastContainer
                             className="custom-toast-container"
                             position="top-center"
-                            autoClose={3000}
+                            autoClose={2000}
                         />
                     </Animation>
                 </div>

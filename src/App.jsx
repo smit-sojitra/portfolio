@@ -23,17 +23,21 @@ function App() {
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false);
-    },2200)
+    },2000)
   },[])
   return (
-    
-     <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/projects' element={<Projects/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path="*" element={<Navigate to="/"/>} />
-     </Routes>
+    <div>
+      {
+        loading ? (<Preloader/>) :(<Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/projects' element={<Projects/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/skills' element={<Skills/>}/>
+          <Route path="*" element={<Navigate to="/"/>} />
+       </Routes>)
+      }
+    </div>
+     
       
   )
 }

@@ -32,14 +32,13 @@ exports.submitForm = async (req,res)=>{
     catch(error){
         console.log('Error while saving data',error);
         if (error instanceof z.ZodError) {
-            // Map over the errors array to extract and log each message
             const errorMessages = error.errors.map((err) => err.message);
         
             console.log('Validation errors:', errorMessages);
         
             res.status(400).json({
                 error: "Error occurred during saving data",
-                messages: errorMessages,  // Send all error messages in the response
+                messages: errorMessages,  
             });
         }
         

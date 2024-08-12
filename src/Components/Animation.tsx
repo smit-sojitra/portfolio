@@ -14,7 +14,7 @@ const Animation = ({children}:Props) => {
     }
   },[isInView])
   return (
-    <div ref={ref} style={{zIndex:'10'}}>
+    <div ref={ref} style={{zIndex:''}}>
         <motion.div
         variants={{
           hidden:{opacity:0, y:75},

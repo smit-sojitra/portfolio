@@ -30,10 +30,10 @@ const SkillSection = () => {
     }, [isInView2])
 
     return (
-        <div id="" className="min-h-screen relative pb-44 bg-neutral-900 px-10  md:px-20 pt-40">
+        <div id="" className="min-h-screen relative pb-44 bg-neutral-900 px-10  md:px-20 pt-28 sm:pt-40">
             <div className="flex flex-col gap-5 items-center md:pt-16 max-w-[1200px] w-full justify-center md:flex md:flex-row mx-auto">
-                <div className="skill-container-left md:w-[50%] w-full mt-10">
-                    <h2 className="skill-heading z-10">
+                <div className="skill-container-left md:w-[50%] w-full ">
+                    <h2 className="skill-heading text-3xl md:text-[52px] z-10 md">
                         <Animation>Know Who<span className="text-[#c770f0]"> I'M</span></Animation>
                     </h2>
                     <div className="skill-subHeading z-10 md:[80%] w-full text-xl">

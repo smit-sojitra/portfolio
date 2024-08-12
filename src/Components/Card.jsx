@@ -86,7 +86,6 @@ const Card = ({ rotate, item, containerRef }) => {
                         as="button"
                         className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
                         onClick={() => {
-                          console.log("first");
                         }}
                       >
                         Source Code

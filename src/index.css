@@ -1,51 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-div,p,span {
+
+div,
+p,
+span {
   margin: 0;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 @media (min-width: 765px) and (max-width: 900px) {
   .tech-icons {
     width: 140px;
   }
 }
+
 @media (min-width: 324px) and (max-width: 460px) {
   .tech-icons {
     width: 130px;
   }
 }
-@media (max-width: 324px){
+
+@media (max-width: 324px) {
   .tech-icons {
     width: 80px;
     height: 60px;
   }
 }
-@media (max-width: 260px){
+
+@media (max-width: 260px) {
   .tech-icons {
     width: 50px;
     height: 50px;
   }
 }
+
 @media (max-width:450px) {
   .skill-icon {
     width: 20px;
     height: 20px;
   }
 }
+
 @media (min-width:450px) {
   .skill-icon {
     width: 40px;
     height: 40px;
   }
 }
+
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
@@ -71,107 +82,113 @@ div,p,span {
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
 }
+
 .load {
-position: relative;
-width: 2.5em;
-height: 2.5em;
-transform: rotate(165deg);
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
 }
 
-.load:before, .load:after {
-content: "";
-position: absolute;
-top: 50%;
-left: 50%;
-display: block;
-width: 0.5em;
-height: 0.5em;
-border-radius: 0.25em;
-transform: translate(-50%, -50%);
+.load:before,
+.load:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
 }
 
 .load:before {
-animation: before8 2s infinite;
+  animation: before8 2s infinite;
 }
 
 .load:after {
-animation: after6 2s infinite;
+  animation: after6 2s infinite;
 }
 
 @keyframes before8 {
-0% {
-width: 0.5em;
-box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
-}
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
 
-35% {
-width: 2.5em;
-box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
-}
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
 
-70% {
-width: 0.5em;
-box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
-}
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
 
-100% {
-box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
-}
+  100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
 }
 
 @keyframes after6 {
-0% {
-height: 0.5em;
-box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+
+  100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
 }
 
-35% {
-height: 2.5em;
-box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
-}
-
-70% {
-height: 0.5em;
-box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
-}
-
-100% {
-box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
-}
-}
 .load {
-position: absolute;
-top: calc(50% - 1.25em);
-left: calc(50% - 1.25em);
+  position: absolute;
+  top: calc(50% - 1.25em);
+  left: calc(50% - 1.25em);
 }
+
 * {
-    scrollbar-width: auto;
-    scrollbar-color: #afb2bf;
-  }
-  
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 3px;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: #000814;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #afb2bf;
-    border-radius: 10px;
-    visibility: hidden;
-  }
-  *:active::-webkit-scrollbar-thumb,
-  *:focus::-webkit-scrollbar-thumb,
-  *:hover::-webkit-scrollbar-thumb {
-    visibility: visible;
-  }
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
 
 /* Navbar */
 
@@ -218,6 +235,7 @@ left: calc(50% - 1.25em);
 .active::after {
   transform: scaleX(1);
 }
+
 /*  */
 .menu {
   color: #fff;
@@ -302,10 +320,14 @@ button:active {
 
 /* wave animation */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -313,73 +335,139 @@ button:active {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 /* Footer */
 
- footer{
+footer {
   border-top-left-radius: 125px;
   font-size: 13px;
   line-height: 20px;
-  background:linear-gradient(to right, #00093c, #2d0b00);
- }
+  background: linear-gradient(to right, #00093c, #2d0b00);
+}
 
+@media (max-width: 315px) {
+  footer {
+    border-top-left-radius: 0px;
+    font-size: xx-small;
+    padding-bottom: 4px;
+  }
 
-ul li a{
-  text-decoration:  none;
+  .footerText {
+    font-size: x-small;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .footerIcon {
+    font-size: medium;
+  }
+
+  .underline {
+    height: 1px;
+    margin-top: 4px;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    background: #767676;
+    border-radius: 3px;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .DropMenu {
+    height: 15px;
+    width: 15px;
+  }
+
+  .cbtn {
+    padding-left: 11px;
+    padding-right: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: medium;
+    border-radius: 9px;
+  }
+
+  .cplane {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+ul li a {
+  text-decoration: none;
   color: #fff;
 }
-.underline{
-  width: 100%;
-  height: 5px;
-  position: absolute;
-  top: 25px;
-  background: #767676;
-  border-radius: 3px;
-  left:0;
-  overflow: hidden;
+
+@media (min-width: 315px) {
+  .underline {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 25px;
+    background: #767676;
+    border-radius: 3px;
+    left: 0;
+    overflow: hidden;
+  }
 }
-.underline span{
+
+.underline span {
   border-radius: 3px;
   width: 15px;
   height: 100%;
   background: white;
   position: absolute;
-  top:0;
+  top: 0;
   left: 10px;
   animation: moving 2s linear infinite;
 }
+
 @keyframes moving {
-  0%{
+  0% {
     left: -20px;
   }
-  100%{
+
+  100% {
     left: 100%;
   }
 }
- .social-icon li a:hover{
+
+.social-icon li a:hover {
   transform: translateY(-10px);
 }
+
 /* Contact button */
 .Cbutton {
   --primary: #ff5569;
@@ -406,16 +494,19 @@ ul li a{
   font-size: 18px;
   font-weight: 600;
 }
+
 .Cbutton:hover {
   transform: scale(1.02);
   box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
     0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 3px -3px rgba(0, 0, 0, 0.04);
 }
+
 .Cbutton:active {
   transform: scale(1);
   box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
     0 10px 3px -3px rgba(0, 0, 0, 0.2);
 }
+
 .Cbutton:after {
   content: "";
   position: absolute;
@@ -423,15 +514,16 @@ ul li a{
   border-radius: var(--radius);
   /* border: 2.5px solid transparent; */
   background: linear-gradient(var(--neutral-1), var(--neutral-2)) padding-box,
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45))
-      border-box;
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45)) border-box;
   z-index: 0;
   transition: all 0.4s ease;
 }
+
 .Cbutton:hover::after {
   transform: scale(1.05, 1.1);
   box-shadow: inset 0 -1px 3px 0 rgba(255, 255, 255, 1);
 }
+
 .Cbutton::before {
   content: "";
   inset: 7px 6px 6px 6px;
@@ -441,11 +533,13 @@ ul li a{
   filter: blur(0.5px);
   z-index: 2;
 }
+
 .state p {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .state .Cicon {
   position: absolute;
   left: 0;
@@ -458,6 +552,7 @@ ul li a{
   align-items: center;
   justify-content: center;
 }
+
 .state .Cicon svg {
   overflow: visible;
 }
@@ -472,30 +567,33 @@ ul li a{
   transition: opacity 0.4s ease;
   inset: -2px -3.5px;
 }
+
 .Coutline::before {
   content: "";
   position: absolute;
   inset: -100%;
-  background: conic-gradient(
-    from 180deg,
-    transparent 60%,
-    white 80%,
-    transparent 100%
-  );
+  background: conic-gradient(from 180deg,
+      transparent 60%,
+      white 80%,
+      transparent 100%);
   animation: spin 2s linear infinite;
   animation-play-state: paused;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 .Cbutton:hover .Coutline {
   opacity: 1;
 }
+
 .Cbutton:hover .Coutline::before {
   animation-play-state: running;
 }
@@ -506,29 +604,35 @@ ul li a{
   opacity: 0;
   animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
 }
+
 .Cbutton:hover p span {
   opacity: 1;
   animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
 }
+
 .Cbutton:focus p span {
   opacity: 1;
   animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
 }
+
 @keyframes wave {
   30% {
     opacity: 1;
     transform: translateY(4px) translateX(0) rotate(0);
   }
+
   50% {
     opacity: 1;
     transform: translateY(-3px) translateX(0) rotate(0);
     color: var(--primary);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) translateX(0) rotate(0);
   }
 }
+
 @keyframes slideDown {
   0% {
     opacity: 0;
@@ -536,24 +640,29 @@ ul li a{
     color: var(--primary);
     filter: blur(5px);
   }
+
   30% {
     opacity: 1;
     transform: translateY(4px) translateX(0) rotate(0);
     filter: blur(0);
   }
+
   50% {
     opacity: 1;
     transform: translateY(-3px) translateX(0) rotate(0);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) translateX(0) rotate(0);
   }
 }
+
 @keyframes disapear {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
     transform: translateX(5px) translateY(20px);
@@ -566,34 +675,42 @@ ul li a{
 .state--default .Cicon svg {
   animation: land 0.6s ease forwards;
 }
+
 .Cbutton:hover .state--default .Cicon {
   transform: rotate(45deg) scale(1.25);
 }
+
 .Cbutton:focus .state--default svg {
   animation: takeOff 0.8s linear forwards;
 }
+
 .Cbutton:focus .state--default .Cicon {
   transform: rotate(0) scale(1.25);
 }
+
 @keyframes takeOff {
   0% {
     opacity: 1;
   }
+
   60% {
     opacity: 1;
     transform: translateX(70px) rotate(45deg) scale(2);
   }
+
   100% {
     opacity: 0;
     transform: translateX(160px) rotate(45deg) scale(0);
   }
 }
+
 @keyframes land {
   0% {
     transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
     opacity: 0;
     filter: blur(3px);
   }
+
   100% {
     transform: translateX(0) translateY(0) rotate(0);
     opacity: 1;
@@ -611,21 +728,26 @@ ul li a{
   left: -5px;
   background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
 }
+
 .Cbutton:focus .state--default .Cicon:before {
   animation: contrail 0.8s linear forwards;
 }
+
 @keyframes contrail {
   0% {
     width: 0;
     opacity: 1;
   }
+
   8% {
     width: 15px;
   }
+
   60% {
     opacity: 0.7;
     width: 80px;
   }
+
   100% {
     opacity: 0;
     width: 160px;
@@ -639,30 +761,38 @@ ul li a{
   display: flex;
   position: relative;
 }
+
 .state--default span:nth-child(4) {
   margin-right: 5px;
 }
+
 .state--sent {
   display: none;
 }
+
 .state--sent svg {
   transform: scale(1.25);
   margin-right: 8px;
 }
+
 .Cbutton:focus .state--default {
   position: absolute;
 }
+
 .Cbutton:focus .state--sent {
   display: flex;
 }
+
 .Cbutton:focus .state--sent span {
   opacity: 0;
   animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
 }
+
 .Cbutton:focus .state--sent .Cicon svg {
   opacity: 0;
   animation: appear 1.2s ease forwards 0.8s;
 }
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -670,21 +800,177 @@ ul li a{
     color: var(--primary);
     filter: blur(4px);
   }
+
   30% {
     opacity: 1;
     transform: scale(0.6);
     filter: blur(1px);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.2);
     filter: blur(0);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
-.custom-toast-container .Toastify__toast  {
-  z-index: 100; 
+
+.Toastify {
+  position: relative;
+  z-index: 100;
+}
+
+/* Preloader */
+/* From Uiverse.io by Navarog21 */
+.loader {
+  background-color: black;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform-origin: center;
+  transition: 1s;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px purple,
+    inset 5px 5px 12px rgba(44, 0, 114, 0.8),
+    inset 8px 8px 1px rgba(160, 120, 255, 0.7),
+    0px 0px 1px rgba(160, 120, 255, 0.6);
+  animation: 1.2s linear infinite 0s running first682;
+}
+
+.loader div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+#first {
+  transform: rotate(90deg)
+}
+
+#first::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+    0px 0px 2px white;
+  border-radius: 50px;
+  animation: 0.8s ease-in 0s infinite running jump2;
+}
+
+#second {
+  transform: rotate(90deg);
+}
+
+#second::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+    0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.5s ease-in 0s infinite running jump2;
+}
+
+#third {
+  transform: rotate(90deg)
+}
+
+#third::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+    0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.6s ease-in 0s infinite running jump2;
+}
+
+.loader::after {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+    0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.2s ease-in 1s alternate infinite running jump2;
+}
+
+@keyframes first682 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+    transform: rotate(90deg)
+  }
+
+  50% {
+    transform: rotate(90deg);
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(180deg);
+    transform: rotate(270deg)
+  }
+
+  100% {
+    transform: rotate(270deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jump2 {
+  0% {
+    top: 100%;
+  }
+
+  25% {
+    top: 230%
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  75% {
+    height: 0.6em
+  }
+
+  100% {
+    height: 1em
+  }
+}
+
+.lo {
+  background: linear-gradient(-90deg, #00093c, #2d0b00);
 }
