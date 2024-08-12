@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Animation from './Animation'
 import DropDownMenu from './DropDownMenu';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { TiMessage } from "react-icons/ti";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
@@ -9,24 +9,26 @@ import { IoHomeOutline } from "react-icons/io5";
 import img from "../assets/image.png"
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const pathName = useLocation();
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     }
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", onScroll);
     return () =>
       window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, [pathName])
 
 
   return (
 
-    <div className={scrolled ? 'scrolled duration-[500ms] transition-all  px-4 md:px-0' : 'nav duration-[500ms] transition-all px-4 md:px-0'}>
-      <div className="navbar py-1 sm:py-2 px-0 md:px-4">
+    <div className={scrolled ? 'scrolled  px-4 md:px-0' : 'nav px-4 md:px-0'}>
+      <div className="navbar py-4 sm:py-3 px-0 md:px-4">
         <div className="logo-container">
           <Animation >
             <Link to={'/'}>

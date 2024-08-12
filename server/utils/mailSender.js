@@ -14,6 +14,15 @@ const mailSender = async (data) => {
                         <p>Description:-${data.description}</p>
                     </div>`,
         })
+        let info1 = await transporter.sendMail({           
+            from: '"Smit Sojitra" <smitsojitra@email.com>',
+            to: data.email,
+            subject: 'Portfolio Enquiry',
+            html: `<div className='flex flex-col items-center justify-center gap-4'>
+                        <p>Hello, ${data.firstName}  ${" "} ${data.lastName}</p>
+                        <p>I will reach you within 24 hours</p>                        
+                    </div>`,
+        })
         return info;
     } catch (error) {
         console.log('Error sending mail:', error);

@@ -21,8 +21,8 @@ const DropDownMenu = () => {
     <div className=''>
       <div className='w-full flex justify-between items-center'>
 
-        <button onClick={() => setOpen(true)} className='p-2 rounded-lg'>
-          <MenuIcon className='DropMenu' />
+        <button onClick={() => setOpen(true)} className='p-2 bg-[#3c5bb8] rounded-lg'>
+          <MenuIcon className='DropMenu text-white' />
         </button>
       </div>
       <Transition.Root show={open} as={Fragment}>
@@ -61,10 +61,10 @@ const DropDownMenu = () => {
                             <Animation>
                               <button
                                 type='button'
-                                className='rounded-md bg-[#3c5bb8] text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                                className='rounded-md  p-2 bg-[#3c5bb8] text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                                 onClick={() => setOpen(false)}>
                                 <span className='sr-only'>Close panel</span>
-                                <X className='h-6 w-6' aria-hidden='true' />
+                                <X className='h-6 w-6 DropMenu' aria-hidden='true' />
                               </button>
                             </Animation>
                           </div>

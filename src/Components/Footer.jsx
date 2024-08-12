@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <footer className='w-full absolute mt-[-117px] pb-8 md:pb-0 md:mt-[-90px]  text-white'>
       <div className="row flex flex-col md:flex md:flex-row justify-around items-center">
-        <div className="col flex mt-2">
+        <div className="col flex">
         <Link to={'/'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><IoHomeOutline />Home</div></Link>
             <Link to={'/skills'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><GoPerson />About</div></Link>
             <Link to={'/projects'}><div className='menu md:flex md:flex-row flex flex-col gap-1 items-center'><AiOutlineFundProjectionScreen />Projects</div></Link>

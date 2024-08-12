@@ -2,6 +2,8 @@ import Button from './Button';
 import Animation from './Animation'
 import Typewriter from "typewriter-effect";
 import HomeLogo from "../assets/home-main.svg"
+import HireMeButton from './HireMeButton';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -22,7 +24,7 @@ const HeroSection = () => {
                   options={{
                     strings: [
                       "Software Developer",
-                      "Freelancer",
+                      "Problem Solver",
                       "MERN Stack Developer",
                       "Open Source Contributor",
                     ],
@@ -44,12 +46,20 @@ const HeroSection = () => {
           </Animation>
 
           {/* <div className="btn" id="">Hire me</div> */}
-          <Animation><Button /></Animation>
+          <Animation>
+
+            <div className="flex gap-4 btns items-center">
+              <Button />
+              <Link to={'/contact'}>
+                <HireMeButton />
+              </Link>
+            </div>
+          </Animation>
 
         </div>
         <div className="hero-section-right flex justify-center">
           <Animation>
-          <img src={HomeLogo} className='max-h-[450px]'></img>
+            <img src={HomeLogo} className='max-h-[450px]'></img>
           </Animation>
         </div>
       </div>

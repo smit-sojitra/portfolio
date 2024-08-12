@@ -6,6 +6,7 @@ import typeScript from "../assets/Typescript.svg"
 import portfolio from "../assets/portfolio1.png"
 import zod from "../assets/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_gpeh3ce2tf7p5av777dm.avif"
 import redux from "../assets/Redux.svg"
+import chatApp from "../assets/realtime-chatApp.png"
 import node from "../assets/NodeJs.svg"
 import message from "../assets/anonymousMessage.png"
 import shop from "../assets/shopeWebsite.png"
@@ -30,7 +31,7 @@ export const data =[
         title:'Realtime Chat App',
         desc:'Developed a scalable real-time chat application using Next.js, Tailwind CSS, Zod, and Redis. Implemented full-stack features with seamless real-time communication, robust schema validation, and efficient data handling, while integrating Pusher for real-time communication.',
         Img:[next,redis,typeScript,zod,tailwind],
-        image:message,
+        image:chatApp,
         Llink:'https://realtime-chat-app66.vercel.app',
         Glink:'https://github.com/smit-sojitra/realtime-chat-app',
         rotate:'0'

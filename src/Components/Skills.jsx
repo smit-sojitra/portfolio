@@ -27,7 +27,7 @@ const Skills = () => {
     return (
         <div className='flex justify-center items-center flex-col'>
             <Animation >
-                <div className='text-center text-white pb-8 pt-20 z-[10] text-[2.3em]'>Professional <span className=' text-[#c770f0]'>SkillSet</span></div>
+                <div className='text-center text-white pb-8 pt-16 md:pt-20 z-[10] text-[2.3em]'>Professional <span className=' text-[#c770f0]'>SkillSet</span></div>
             </Animation>
             <div className='grid grid-cols-2  justify-center sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 max-w-[1200px] mx-auto'>
                 <Animation >
