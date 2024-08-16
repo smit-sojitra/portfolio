@@ -21,7 +21,7 @@ const ProjectSection = () => {
       <BackgroundBeams/>
       <Animation>
 
-      <p className='text-5xl pt-16 pb-2 text-center text-wrap text-white'>My Recent <span className='text-[#c770f0]'>Works</span> </p>
+      <p className='text-5xl pt-8 sm:pt-16 pb-2 text-center text-wrap text-white'>My Recent <span className='text-[#c770f0]'>Works</span> </p>
       <div className='text-white text-xl text-center text-wrap font-medium'>Here are few projects I've worked on recently</div>
       </Animation>
 

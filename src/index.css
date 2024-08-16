@@ -14,6 +14,7 @@ span {
 * {
   box-sizing: border-box;
   padding: 0;
+  scroll-behavior: smooth;
   margin: 0;
 }
 
@@ -323,18 +324,12 @@ span {
     transform: translateY(-0.1em);
   }
 }
-
-
-/* wave animation */
+/* Wave animation */
 .wave {
   animation-name: wave-animation;
-  /* Refers to the name of your @keyframes element below */
   animation-duration: 2.1s;
-  /* Change to speed up or slow down */
   animation-iteration-count: infinite;
-  /* Never stop waving :) */
   transform-origin: 70% 70%;
-  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -347,7 +342,6 @@ span {
     transform: rotate(14deg);
   }
 
-  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
@@ -368,7 +362,6 @@ span {
     transform: rotate(0deg);
   }
 
-  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
@@ -478,6 +471,13 @@ ul li a {
 .Toastify {
   position: relative;
   z-index: 100;
+}
+@media (max-width: 500px) {
+  .Toastify__toast{
+    width: 250px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }
 
 /* Preloader */

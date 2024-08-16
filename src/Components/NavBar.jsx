@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
 
-    <div className={scrolled ? 'scrolled  px-4 md:px-0' : 'nav px-4 md:px-0'}>
+    <div className={scrolled ? 'scrolled shadow-md  px-4 md:px-0' : 'nav px-4 md:px-0'}>
       <div className="navbar py-4 sm:py-3 px-0 md:px-4">
         <div className="logo-container">
           <Animation >

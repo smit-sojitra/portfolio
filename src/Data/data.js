@@ -62,7 +62,7 @@ export const data =[
         Glink:'https://github.com/smit-sojitra/Blog-Website',
     },
     {
-        title:'Rzorpay Frontend Clone',
+        title:'Razorpay Frontend Clone',
         desc:"Showcase my design prowess with a frontend clone of Razorpay's website, meticulously crafted using HTML, JavaScript, and Tailwind CSS. Experience sleek aesthetics, intuitive navigation, and responsive design, highlighting a commitment to detail and user experience excellence.",
         Img:[html,css,js,tailwind],
         image:razorpay,

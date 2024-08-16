@@ -9,7 +9,6 @@ import img from "../assets/contact-img.svg"
 const ContactSection = () => {
     const [isloading, setIsloading] = useState(false)
     const baseUrl = import.meta.env.VITE_APP_BASE_URL;
-    console.log("BaseUrl--",baseUrl);
     const url = baseUrl + "/send"
     const { register, reset, handleSubmit, formState: { errors } } = useForm({
         resolver: zodResolver(userValidation),
@@ -46,7 +45,7 @@ const ContactSection = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: '',
-                    transition: Slide,
+                    transition: Zoom,
                     theme: "light",
                 });
             }
@@ -59,7 +58,7 @@ const ContactSection = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: '',
-                    transition: Slide,
+                    transition: Zoom,
                     theme: "light",
                 });
             }
@@ -72,7 +71,7 @@ const ContactSection = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: '',
-                    transition: Slide,
+                    transition: Zoom,
                     theme: "light",
                 });
             }
@@ -85,7 +84,7 @@ const ContactSection = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: '',
-                    transition: Slide,
+                    transition: Zoom,
                     theme: "light",
                 });
             }
@@ -98,7 +97,7 @@ const ContactSection = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: '',
-                    transition: Slide,
+                    transition: Zoom,
                     theme: "light",
                 });
             }
@@ -109,19 +108,20 @@ const ContactSection = () => {
     const onSubmit = async (data) => {
         setIsloading(true)
         try {
-            const res = await axios.post(url, { data: data }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
             const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 1500));
             toast.promise(
                 resolveAfter3Sec,
                 {
                     pending: 'Sending Message...',
                     success: 'Message sent successfully',
+                    error: 'Failed to send message',
                 }
             )
+            const res = await axios.post(url, { data: data }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
             setTimeout(() => {
                 setIsloading(false);
             }, 1500);

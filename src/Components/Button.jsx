@@ -1,5 +1,5 @@
 import React from 'react'
-import resumeUrl from "../assets/Smit Resume.pdf"
+import resumeUrl from "../assets/Resume.pdf"
 const Button = () => {
   return (
     <button className="Documents-btn">
