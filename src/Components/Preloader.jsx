@@ -3,10 +3,10 @@ const Preloader = () => {
 
   return (
     <div className="flex justify-center pre h-screen items-center ">
-      <div class="loader JS_on">
-        <span class="binary"></span>
-        <span class="binary"></span>
-        <span class="getting-there text-xl mt-2 font-bold">LOADING ...</span>
+      <div className="loader JS_on">
+        <span className="binary"></span>
+        <span className="binary"></span>
+        <span className="getting-there text-xl mt-2 font-bold">LOADING ...</span>
       </div>
     </div>
   )

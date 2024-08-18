@@ -1,5 +1,5 @@
 import { Transition, Dialog } from '@headlessui/react'
-import React, { Fragment, useEffect, useState } from 'react'
+import  { Fragment, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {  MenuIcon, X } from 'lucide-react'
 import Animation from './Animation'
@@ -11,8 +11,6 @@ import img from "../assets/image.png"
 
 const DropDownMenu = () => {
   const [open, setOpen] = useState(false)
-
-  const pathname = useParams()
 
   useEffect(() => {
     setOpen(false)

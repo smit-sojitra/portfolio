@@ -1,4 +1,3 @@
-import React from 'react'
 import Animation from './Animation'
 import { useInView, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react'
@@ -7,27 +6,12 @@ import { StarsBackground } from './ui/stars-background';
 import img from "../assets/about.png"
 import Skills from './Skills';
 
-// import { BackgroundBeams } from "../Components/ui/BackgroundBeams";
-
 const SkillSection = () => {
 
     const ref1 = useRef(null);
-    const isInView2 = useInView(ref1, { once: true })
-
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true })
-    const mainControls = useAnimation()
-    const mainControls2 = useAnimation()
-    useEffect(() => {
-        if (isInView) {
-            mainControls.start("visible")
-        }
-    }, [isInView])
-    useEffect(() => {
-        if (isInView2) {
-            mainControls2.start("visible")
-        }
-    }, [isInView2])
+    
+    
+  
 
     return (
         <div id="" className="min-h-screen relative pb-44 bg-neutral-900 px-10  md:px-20 pt-28 sm:pt-40">

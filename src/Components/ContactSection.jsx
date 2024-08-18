@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
 import Animation from './Animation'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { userValidation } from '../validations/userValidation'
-import { toast, Slide, Zoom, ToastContainer } from 'react-toastify'
+import { toast, Zoom, ToastContainer } from 'react-toastify'
 import img from "../assets/contact-img.svg"
+import { useState,useEffect } from 'react';
 const ContactSection = () => {
     const [isloading, setIsloading] = useState(false)
     const baseUrl = import.meta.env.VITE_APP_BASE_URL;
@@ -24,7 +24,7 @@ const ContactSection = () => {
     useEffect(() => {
         if (errors.firstName && errors.lastName && errors.contactNumber && errors.email && errors.description) {
             toast.error('All fields are required', {
-                className:"custom-toast-container",
+                className: "custom-toast-container",
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -108,24 +108,30 @@ const ContactSection = () => {
     const onSubmit = async (data) => {
         setIsloading(true)
         try {
-            const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 1500));
             toast.promise(
-                resolveAfter3Sec,
+                new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        axios.post(url, { data: data }, {
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                        }).then(response => {
+                            reset();
+                            setIsloading(false);
+                            resolve(response);
+                        }).catch(error => {
+                            reset();
+                            setIsloading(false);
+                            reject(error);
+                        })
+                    }, 100);
+                }),
                 {
                     pending: 'Sending Message...',
                     success: 'Message sent successfully',
                     error: 'Failed to send message',
                 }
             )
-            const res = await axios.post(url, { data: data }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-            setTimeout(() => {
-                setIsloading(false);
-            }, 1500);
-            reset();
         } catch (error) {
             setIsloading(false);
             console.log('err', error)

@@ -18,7 +18,7 @@ const HeroSection = () => {
           </div></Animation>
           <Animation>
             <div className="hero-section-heading w-[700px] flex text-[clamp(25px,5vw,45px)] leading-[45px] hero-section-sub-heading  text-center">
-              I'm
+              I&apos;m
               <div className="ml-5 text-center text-[#3c5bb8] ">
                 <Typewriter
                   options={{
@@ -39,7 +39,7 @@ const HeroSection = () => {
           <Animation >
             <div className="flex items-center ">
               <div className="hero-section-desc text-wrap">
-                I'm a full stack developer and here is my portfolio website.Here you'll learn about my journy as a full stack developer.
+                I&apos;m a full stack developer and here is my portfolio website.Here you&apos;ll learn about my journy as a full stack developer.
               </div>
 
             </div>

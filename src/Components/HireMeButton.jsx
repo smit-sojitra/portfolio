@@ -1,11 +1,10 @@
-import React from 'react'
 
 const HireMeButton = () => {
   return (
 <button className='hrMe'>
    Hire Me
-    <div class="arrow-wrapper">
-        <div class="arrow"></div>
+    <div className="arrow-wrapper">
+        <div className="arrow"></div>
 
     </div>
 </button>

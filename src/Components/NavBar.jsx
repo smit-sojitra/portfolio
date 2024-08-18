@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Animation from './Animation'
 import DropDownMenu from './DropDownMenu';
-import { Link, useLoaderData, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { TiMessage } from "react-icons/ti";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";

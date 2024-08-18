@@ -1,12 +1,6 @@
 
 import './App.css'
 import './index.css'
-import NavBar from './Components/NavBar'
-import HeroSection from './Components/HeroSection'
-import ProjectSection from './Components/ProjectSection'
-import SkillSection from './Components/SkillSection'
-import ContactSection from './Components/ContactSection'
-import Footer from './Components/Footer'
 import { useEffect, useState } from 'react'
 import Preloader from './Components/Preloader'
 import { Navigate, Route, Routes } from 'react-router-dom'
@@ -23,7 +17,7 @@ function App() {
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false);
-    },2000)
+    },800)
   },[])
   return (
     <div>

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../Components/ui/3d-card";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Animation from "./Animation";
 
-const Card = ({ rotate, item, containerRef }) => {
+const Card = ({ item, containerRef }) => {
   const [zIndex, setZIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
