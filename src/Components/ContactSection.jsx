@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { userValidation } from '../validations/userValidation'
 import { toast, Zoom, ToastContainer } from 'react-toastify'
 import img from "../assets/contact-img.svg"
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 const ContactSection = () => {
     const [isloading, setIsloading] = useState(false)
     const baseUrl = import.meta.env.VITE_APP_BASE_URL;
@@ -108,30 +108,27 @@ const ContactSection = () => {
     const onSubmit = async (data) => {
         setIsloading(true)
         try {
+            
+            const resolveAfter1Sec = new Promise(resolve => setTimeout(resolve, 1000)).then(()=>setIsloading(false));
+            const result = axios.post(url, { data: data }, {
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                            })
+            result.then(resolve=>{
+                reset();
+            }).catch(reject=>{
+                reset();
+            })
             toast.promise(
-                new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        axios.post(url, { data: data }, {
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                        }).then(response => {
-                            reset();
-                            setIsloading(false);
-                            resolve(response);
-                        }).catch(error => {
-                            reset();
-                            setIsloading(false);
-                            reject(error);
-                        })
-                    }, 100);
-                }),
+                resolveAfter1Sec,
                 {
                     pending: 'Sending Message...',
                     success: 'Message sent successfully',
                     error: 'Failed to send message',
                 }
             )
+            reset();
         } catch (error) {
             setIsloading(false);
             console.log('err', error)

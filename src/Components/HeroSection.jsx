@@ -19,7 +19,7 @@ const HeroSection = () => {
           <Animation>
             <div className="hero-section-heading w-[700px] flex text-[clamp(25px,5vw,45px)] leading-[45px] hero-section-sub-heading  text-center">
               I&apos;m
-              <div className="ml-5 text-center text-[#3c5bb8] ">
+              <div className="ml-2 sm:ml-5 text-center text-[#3c5bb8] ">
                 <Typewriter
                   options={{
                     strings: [
