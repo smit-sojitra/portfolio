@@ -13,12 +13,19 @@ import Skills from './pages/Skills'
 // import Acertinity from './Components/Acertinity'
 
 function App() {
-  const [loading,setLoading] = useState(true);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setLoading(false);
-    },800)
-  },[])
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Create a new image object to preload the background image
+    const img = new Image();
+    img.src = '../src/assets/banner-bg.png'; // Use the correct public path for your hosted assets
+    img.onload = () => {
+      setTimeout(()=>{
+            setLoading(false);
+          },800)
+    };
+  }, []);
   return (
     <div>
       {
