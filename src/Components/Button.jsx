@@ -1,8 +1,8 @@
-import resumeUrl from "../assets/Resume.pdf"
 const Button = () => {
+  const resumeUrl = import.meta.env.VITE_APP_resumeUrl;
   return (
     <button className="Documents-btn">
-      <a href={resumeUrl} download="Smit Resume">
+      <a href={resumeUrl} download="Resume.pdf" target="_blank" rel="noopener noreferrer">
         <div className="flex">
           <p className="text tracking-[0.2em]">Resume</p>
           <span className="folderContainer">

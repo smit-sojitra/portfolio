@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "star":"next start",
+    "star": "next start",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -16,6 +16,7 @@
     "@headlessui/react": "^2.1.2",
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.2",
+    "cloudinary": "^2.6.1",
     "clsx": "^2.1.1",
     "concurrently": "^8.2.2",
     "framer-motion": "^11.2.10",
